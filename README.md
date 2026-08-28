@@ -1,1 +1,2 @@
-# EmoStance
+# EmoStance: Response-Side Affective-Orientation Control for Empathetic Response Generation via Emoji Weak Supervision
+Coming soon...
