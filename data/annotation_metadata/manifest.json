@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0",
+  "files": [
+    {
+      "path": "DeepSeek-V3.2/test.jsonl.gz",
+      "model": "DeepSeek-V3.2",
+      "split": "test",
+      "dialogues": 2538,
+      "jsonl_content_sha256": "986b057b705c30b46899e90e1f378bf29702a6c030dc580eec680e8a08602620"
+    },
+    {
+      "path": "DeepSeek-V3.2/train.jsonl.gz",
+      "model": "DeepSeek-V3.2",
+      "split": "train",
+      "dialogues": 17778,
+      "jsonl_content_sha256": "1d2a4eca0482b54f92b864a56bdb44cd6d20797509b4f2307c291d5242954dfc"
+    },
+    {
+      "path": "DeepSeek-V3.2/valid.jsonl.gz",
+      "model": "DeepSeek-V3.2",
+      "split": "valid",
+      "dialogues": 2757,
+      "jsonl_content_sha256": "8a20f9c13a72dd640239e41d14f2530d07c1572bbfbac20903f9fb586ad04909"
+    },
+    {
+      "path": "claude-sonnet-4-6/test.jsonl.gz",
+      "model": "claude-sonnet-4-6",
+      "split": "test",
+      "dialogues": 2538,
+      "jsonl_content_sha256": "11d26918bb743f4800f87a1d562baaef7a481d0e48a97fc64805777f5f77f065"
+    },
+    {
+      "path": "claude-sonnet-4-6/train.jsonl.gz",
+      "model": "claude-sonnet-4-6",
+      "split": "train",
+      "dialogues": 17780,
+      "jsonl_content_sha256": "e7a01ca2ee6a43ecf6980cb81465ff6f6a312a3833980522f9b79c0803a5c4ab"
+    },
+    {
+      "path": "claude-sonnet-4-6/valid.jsonl.gz",
+      "model": "claude-sonnet-4-6",
+      "split": "valid",
+      "dialogues": 2757,
+      "jsonl_content_sha256": "a8488f2eefc2220b11bf4a7f743cdc3d891e02bb734bca01fceaecf3cbc70ff0"
+    },
+    {
+      "path": "gemini-2.5-pro/test.jsonl.gz",
+      "model": "gemini-2.5-pro",
+      "split": "test",
+      "dialogues": 2538,
+      "jsonl_content_sha256": "ff108880c8852018fe24a71d42dbb391ad4b6690e66187913f022eb9af8e8424"
+    },
+    {
+      "path": "gemini-2.5-pro/train.jsonl.gz",
+      "model": "gemini-2.5-pro",
+      "split": "train",
+      "dialogues": 17780,
+      "jsonl_content_sha256": "ca061e338e99a3f834fd8c2866b30aa44fec8a3d36716875a461751196f81e4d"
+    },
+    {
+      "path": "gemini-2.5-pro/valid.jsonl.gz",
+      "model": "gemini-2.5-pro",
+      "split": "valid",
+      "dialogues": 2757,
+      "jsonl_content_sha256": "ea6dfd41735a231951a1a3bb14fe189b085b6f3e7361140bf8f469674a72e8a2"
+    },
+    {
+      "path": "gpt-5.4/test.jsonl.gz",
+      "model": "gpt-5.4",
+      "split": "test",
+      "dialogues": 2538,
+      "jsonl_content_sha256": "ad5cbaeb637b6dabce690fd07c3eb5c17ab84ad6cb11bd4f6f5bc28cb1133e09"
+    },
+    {
+      "path": "gpt-5.4/train.jsonl.gz",
+      "model": "gpt-5.4",
+      "split": "train",
+      "dialogues": 17780,
+      "jsonl_content_sha256": "468cc289e921c4d541f2a45a076f93c1510617c34c3c6e63fdd737a4cc5f0b9f"
+    },
+    {
+      "path": "gpt-5.4/valid.jsonl.gz",
+      "model": "gpt-5.4",
+      "split": "valid",
+      "dialogues": 2757,
+      "jsonl_content_sha256": "b3d0cd95f8ef7de3026c46b21d53cbc4d2ea18fc39b051079f4487340053aea9"
+    }
+  ]
+}

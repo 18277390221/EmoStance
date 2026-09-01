@@ -1,0 +1,79 @@
+[build-system]
+requires = ["packaging>=24.2", "setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "emostance"
+version = "0.1.0"
+description = "Response-side affective-orientation control for empathetic response generation via emoji weak supervision."
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+  { name = "Ziyuan Jin", email = "jinzy2024@shanghaitech.edu.cn" },
+  { name = "Yuxuan Ge", email = "geyx2023@shanghaitech.edu.cn" },
+  { name = "Zheng Tian", email = "tianzheng@shanghaitech.edu.cn" },
+]
+keywords = ["empathetic dialogue", "controllable generation", "weak supervision", "emoji"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3.10",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "accelerate==1.13.0",
+  "datasets==2.19.1",
+  "emoji==0.1.0",
+  "numpy==2.2.6",
+  "pandas==2.3.3",
+  "pyarrow>=14.0",
+  "protobuf>=4.25",
+  "scikit-learn==1.7.2",
+  "scipy==1.15.3",
+  "sentencepiece>=0.2.0",
+  "torch==2.6.0",
+  "tiktoken>=0.7",
+  "tqdm>=4.66",
+  "transformers==4.46.3",
+]
+
+[project.optional-dependencies]
+clustering = [
+  "leidenalg>=0.10.2",
+  "networkx==3.4.2",
+  "pillow>=10.0",
+  "python-igraph>=0.11.6",
+]
+evaluation = [
+  "bert-score==0.3.12",
+  "nltk>=3.8",
+  "pyyaml>=6.0",
+]
+test = [
+  "networkx==3.4.2",
+  "pytest>=8.0",
+]
+
+[project.urls]
+Repository = "https://github.com/18277390221/EmoStance"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = [
+  "latent_stance_control*",
+  "name_free_emoji_clustering*",
+  "preprocess_data*",
+  "soft_label_table*",
+  "utterance_agreement*",
+]
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+pythonpath = ["src"]
+testpaths = ["tests", "src/name_free_emoji_clustering/tests", "human_llm_emoji_audit/tests"]
+
+[[tool.uv.index]]
+name = "pypi"
+url = "https://pypi.org/simple"
+default = true

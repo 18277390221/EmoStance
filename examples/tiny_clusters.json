@@ -1,0 +1,7 @@
+[
+  {"emoji":"🎉","cluster":0,"candidateClusters":[{"cluster":0,"support":0.9},{"cluster":1,"support":0.1}],"vector":[1.0,0.2,0.0]},
+  {"emoji":"😊","cluster":0,"vector":[0.8,0.4,0.1]},
+  {"emoji":"😞","cluster":1,"vector":[0.0,0.8,0.3]},
+  {"emoji":"😟","cluster":1,"vector":[0.1,0.9,0.2]},
+  {"emoji":"😡","cluster":2,"candidateClusters":[{"cluster":2,"support":0.75},{"cluster":1,"support":0.25}],"vector":[0.2,0.1,1.0]}
+]

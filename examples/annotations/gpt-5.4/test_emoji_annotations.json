@@ -1,0 +1,60 @@
+[
+  {
+    "dialogue_id": "tiny_test_1",
+    "split": "test",
+    "situation": "My closest friend stopped talking to me, and I keep wondering what I did wrong.",
+    "num_turns": 4,
+    "speakers": ["A", "B"],
+    "turns": [
+      {
+        "turn_id": 0,
+        "speaker": "A",
+        "utterance": "My closest friend stopped talking to me.",
+        "emoji_annotation": {
+          "selected_emoji": "😞",
+          "unicode": "U+1F61E",
+          "confidence": 5,
+          "confidence_desc": "very confident",
+          "error": null
+        }
+      },
+      {
+        "turn_id": 1,
+        "speaker": "B",
+        "utterance": "I'm sorry, that must feel really painful.",
+        "emoji_annotation": {
+          "selected_emoji": "😟",
+          "unicode": "U+1F61F",
+          "confidence": 4,
+          "confidence_desc": "fairly confident",
+          "error": null
+        }
+      },
+      {
+        "turn_id": 2,
+        "speaker": "A",
+        "utterance": "I keep wondering what I did wrong.",
+        "emoji_annotation": {
+          "selected_emoji": "😞",
+          "unicode": "U+1F61E",
+          "confidence": 5,
+          "confidence_desc": "very confident",
+          "error": null
+        }
+      },
+      {
+        "turn_id": 3,
+        "speaker": "B",
+        "utterance": "It makes sense to replay it, but you deserve a kind conversation too.",
+        "emoji_annotation": {
+          "selected_emoji": "😟",
+          "unicode": "U+1F61F",
+          "confidence": 4,
+          "confidence_desc": "fairly confident",
+          "error": null
+        }
+      }
+    ],
+    "annotation_mode": "batch"
+  }
+]

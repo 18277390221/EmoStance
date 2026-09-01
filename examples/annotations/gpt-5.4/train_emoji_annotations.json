@@ -1,0 +1,60 @@
+[
+  {
+    "dialogue_id": "tiny_train_1",
+    "split": "train",
+    "situation": "I got a promotion today, and I feel excited but also a little nervous about the new responsibility.",
+    "num_turns": 4,
+    "speakers": ["A", "B"],
+    "turns": [
+      {
+        "turn_id": 0,
+        "speaker": "A",
+        "utterance": "I got a promotion today.",
+        "emoji_annotation": {
+          "selected_emoji": "🎉",
+          "unicode": "U+1F389",
+          "confidence": 5,
+          "confidence_desc": "very confident",
+          "error": null
+        }
+      },
+      {
+        "turn_id": 1,
+        "speaker": "B",
+        "utterance": "That is wonderful, congratulations!",
+        "emoji_annotation": {
+          "selected_emoji": "🎉",
+          "unicode": "U+1F389",
+          "confidence": 4,
+          "confidence_desc": "fairly confident",
+          "error": null
+        }
+      },
+      {
+        "turn_id": 2,
+        "speaker": "A",
+        "utterance": "I'm excited but a little nervous about the new role.",
+        "emoji_annotation": {
+          "selected_emoji": "😊",
+          "unicode": "U+1F60A",
+          "confidence": 4,
+          "confidence_desc": "fairly confident",
+          "error": null
+        }
+      },
+      {
+        "turn_id": 3,
+        "speaker": "B",
+        "utterance": "That makes sense. You earned it, and you can grow into it.",
+        "emoji_annotation": {
+          "selected_emoji": "😊",
+          "unicode": "U+1F60A",
+          "confidence": 4,
+          "confidence_desc": "fairly confident",
+          "error": null
+        }
+      }
+    ],
+    "annotation_mode": "batch"
+  }
+]

@@ -1,0 +1,78 @@
+{
+  "runtime": {
+    "python": "3.10.14",
+    "pytorch": "2.6.0+cu118",
+    "cuda": "11.8",
+    "transformers": "4.46.3",
+    "tokenizers": "0.20.3",
+    "accelerate": "1.13.0"
+  },
+  "models": {
+    "orientation_encoder": "microsoft/deberta-v3-base",
+    "frozen_generator": "mistralai/Mistral-7B-Instruct-v0.3"
+  },
+  "optimizer": "AdamW",
+  "orientation_predictor": {
+    "learning_rate": 1.5e-5,
+    "batch_size_per_device": 8,
+    "effective_batch_size": 8,
+    "gradient_accumulation": 1,
+    "epochs": 3,
+    "warmup_ratio": 0.06,
+    "weight_decay": 0.01,
+    "max_input_tokens": 320,
+    "role_embedding_dim": 32,
+    "transition_smoothing_alpha": 0.05,
+    "focal_gamma": 0.0,
+    "class_imbalance_exponent": 0.25,
+    "loss_weights": {
+      "target": 1.0,
+      "prior_free_target_aux": 0.2,
+      "source": 0.4,
+      "vector": 0.1,
+      "transition_prior_logits": 0.5
+    }
+  },
+  "clustering": {
+    "splits": ["train"],
+    "latent_clusters": 9,
+    "vector_dim": 256,
+    "lambda_context": 0.65,
+    "lambda_confusion": 0.35,
+    "knn_k": 8,
+    "centroid_shrinkage_tau": 50.0,
+    "leiden_resolution": 1.6,
+    "boundary_absolute_threshold": 0.70,
+    "boundary_relative_threshold": 0.85,
+    "boundary_max_clusters": 4,
+    "soft_membership_temperature": 0.7
+  },
+  "prefix_projector": {
+    "learning_rate": 0.0001,
+    "batch_size_per_device": 1,
+    "effective_batch_size": 1,
+    "gradient_accumulation": 1,
+    "epochs": 1,
+    "prefix_length": 8,
+    "hidden_dim": 4096,
+    "max_prompt_tokens": 384,
+    "max_training_response_tokens": 128,
+    "precision": "bf16 generator; fp32 orientation modules"
+  },
+  "decoding": {
+    "do_sample": true,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "top_k": null,
+    "max_new_tokens": 64
+  },
+  "reranking": {
+    "candidates": 4,
+    "length_penalty_eta": 0.0
+  },
+  "reporting": {
+    "seeds": [13, 21, 42],
+    "evaluation_subset_per_split": 512,
+    "checkpoint_selection": "development target soft cross-entropy"
+  }
+}

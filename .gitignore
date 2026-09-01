@@ -1,0 +1,68 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Environments and editors
+.venv/
+venv/
+.env
+.env.*
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Models, checkpoints, and generated runs
+models/
+checkpoints/
+/runs/
+/outputs/
+wandb/
+*.ckpt
+*.pt
+*.pth
+*.bin
+*.safetensors
+
+# Text-bearing or private data. Keep only the released metadata.
+private_data/
+data/*
+!data/README.md
+!data/DATA_LICENSE.md
+!data/annotation_metadata/
+!data/annotation_metadata/manifest.json
+!data/annotation_metadata/**/*.jsonl.gz
+
+# Generated clustering artifacts; keep the two released tables.
+src/name_free_emoji_clustering/outputs/*
+!src/name_free_emoji_clustering/outputs/soft_membership/
+!src/name_free_emoji_clustering/outputs/soft_membership/emoji_cluster_membership.csv
+!src/name_free_emoji_clustering/outputs/tables/
+!src/name_free_emoji_clustering/outputs/tables/emoji_centroids.csv
+
+# Human-participant exports and generated evaluation pages
+human_ablation/results/
+human_ablation/html/
+human_llm_emoji_audit/exports/
+human_llm_emoji_audit/results/
+human_llm_emoji_audit/reports/
+human_llm_emoji_audit/html/
+data_eval/html/
+data_eval/results/
+rerank_efficiency/logs/
+rerank_efficiency/results/
+rerank_efficiency/reports/
+system_baseline/data/
+system_baseline/generations/
+system_baseline/logs/
+system_baseline/metrics/
+system_baseline/outputs/
+system_baseline/reports/

@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use EmoStance, please cite the paper and this software."
+title: "EmoStance"
+type: software
+version: 0.1.0
+date-released: 2026-08-31
+authors:
+  - family-names: Jin
+    given-names: Ziyuan
+    email: jinzy2024@shanghaitech.edu.cn
+    affiliation: ShanghaiTech University
+  - family-names: Ge
+    given-names: Yuxuan
+    email: geyx2023@shanghaitech.edu.cn
+    affiliation: ShanghaiTech University
+  - family-names: Tian
+    given-names: Zheng
+    email: tianzheng@shanghaitech.edu.cn
+    affiliation: ShanghaiTech University
+repository-code: "https://github.com/18277390221/EmoStance"
+license: MIT
+preferred-citation:
+  type: generic
+  title: "EmoStance: Response-Side Affective-Orientation Control for Empathetic Response Generation via Emoji Weak Supervision"
+  year: 2026
+  authors:
+    - family-names: Jin
+      given-names: Ziyuan
+    - family-names: Ge
+      given-names: Yuxuan
+    - family-names: Tian
+      given-names: Zheng

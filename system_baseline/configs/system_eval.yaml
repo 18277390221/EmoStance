@@ -1,0 +1,131 @@
+project_root: .
+
+system_order:
+  - emostance
+  - llm_only
+  - llm_prompt
+  - llm_sft
+  - empo_dpo
+  - case
+  - aptness
+  - sibyl
+
+data:
+  canonical_test: system_baseline/data/ed_test_canonical.jsonl
+  ed_test_source_candidates:
+    - baseline/Sibyl/ED_data/test.json
+    - empatheticdialogues/test.csv
+    - pre_data/test.json
+    - runs/main/prepared/test.jsonl
+
+generation:
+  # Keep false by default so run_all.sh is safe on machines where full 7B
+  # inference would be too expensive. Use --execute-full or set this to true
+  # for the actual fair rerun.
+  execute_full: false
+  smoke_test: false
+  smoke_n: 5
+  max_prompt_length: 2048
+  max_new_tokens: 80
+  temperature: 0.7
+  top_p: 0.9
+  top_k: 50
+  do_sample: true
+  num_return_sequences: 1
+  seed: 20260512
+  progress_every: 20
+
+evaluation:
+  compute_bertscore: true
+  bertscore_model_type: distilbert-base-uncased
+  bertscore_num_layers: 6
+  bertscore_batch_size: 64
+  self_bleu_max_items: 200
+  self_bleu_seed: 20260512
+  bootstrap_samples: 1000
+  bootstrap_seed: 20260512
+
+systems:
+  emostance:
+    display_name: EmoStance / Ours
+    generator_dir: runs/main/generator
+    stance_dir: runs/main/stance_baseline
+    prepared_dir: runs/main/prepared
+    cluster_prototypes: runs/main/ablations_role_aware/cluster_prototypes.json
+    bf16: true
+    artifact_candidates:
+      - system_baseline/generations/ours.jsonl
+      - baseline_human_old/data/ours_length_controlled_outputs.jsonl
+      - runs/main/control_seed42/generations_test.scored.jsonl
+
+  llm_only:
+    display_name: LLM-only
+    model_path: Mistral-7B-Instruct-v0.3
+    torch_dtype: auto
+    artifact_candidates:
+      - system_baseline/generations/llm_only.jsonl
+      - baseline_human_old/data/llm_only_outputs.jsonl
+
+  llm_prompt:
+    display_name: LLM-prompt
+    model_path: Mistral-7B-Instruct-v0.3
+    torch_dtype: auto
+    artifact_candidates:
+      - system_baseline/generations/llm_prompt.jsonl
+      - baseline_human_old/data/llm_prompt_outputs.jsonl
+
+  llm_sft:
+    display_name: LLM-SFT
+    model_path: Mistral-7B-Instruct-v0.3
+    adapter_path: baseline/EmPO/outputs/EmPO-SFT
+    torch_dtype: auto
+    artifact_candidates:
+      - system_baseline/generations/llm_sft.jsonl
+      - baseline/EmPO/outputs/generated_samples_test.jsonl
+      - baseline/EmPO/outputs/generated_samples.jsonl
+      - baseline_human_old/data/raw_generations/empo/generated_samples_test_full.jsonl
+
+  empo_dpo:
+    display_name: EmPO-DPO
+    model_path: Mistral-7B-Instruct-v0.3
+    adapter_path: baseline/EmPO/outputs/EmPO-DPO
+    torch_dtype: auto
+    artifact_candidates:
+      - system_baseline/generations/empo_dpo.jsonl
+      - baseline/EmPO/outputs/generated_samples_test.jsonl
+      - baseline/EmPO/outputs/generated_samples.jsonl
+      - baseline_human_old/data/raw_generations/empo/generated_samples_test_full.jsonl
+
+  case:
+    display_name: CASE
+    checkpoint: baseline/CASE/outputs/case_baseline/checkpoints/CASE_13999_41.4115
+    generation_artifact: baseline/CASE/outputs/case_baseline/generations/case_test_generations.jsonl
+    artifact_candidates:
+      - baseline/CASE/outputs/case_baseline/generations/case_test_generations.jsonl
+      - baseline/CASE/outputs/case_baseline/generations/case_test_sample100_seed13.jsonl
+      - system_baseline/generations/case.jsonl
+
+  aptness:
+    display_name: APTNESS
+    model_path: Mistral-7B-Instruct-v0.3
+    index_dir: baseline/APTNESS/aptrag_mistral_baseline/runs/apt_rag_mistral/apt_response_index
+    retrieval_top_k: 2
+    generation_batch_size: 8
+    torch_dtype: auto
+    artifact_candidates:
+      - system_baseline/generations/aptness.jsonl
+      - baseline/APTNESS/aptrag_mistral_baseline/runs/apt_rag_mistral/apt_rag_outputs.jsonl
+      - baseline/APTNESS/aptrag_mistral_baseline/runs/apt_rag_mistral/gen_outputs.jsonl
+      - baseline_human_old/data/raw_generations/aptness/aptness_outputs.jsonl
+
+  sibyl:
+    display_name: Sibyl
+    model_path: Mistral-7B-Instruct-v0.3
+    adapter_path: baseline/Sibyl/local_mistral_baseline/outputs/response_generator_lora
+    sibyl_test_path: baseline/Sibyl/ED_data/Sibyl_test.json
+    generation_batch_size: 4
+    torch_dtype: auto
+    artifact_candidates:
+      - system_baseline/generations/sibyl.jsonl
+      - baseline/Sibyl/local_mistral_baseline/outputs/mistral_sibyl_test_sample_generations.jsonl
+      - baseline_human_old/data/raw_generations/sibyl/mistral_sibyl_test_generations.jsonl

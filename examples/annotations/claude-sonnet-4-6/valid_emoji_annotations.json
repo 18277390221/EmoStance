@@ -1,0 +1,16 @@
+[
+  {
+    "dialogue_id": "tiny_valid_1",
+    "split": "valid",
+    "situation": "My flight was canceled and I am exhausted, and I just want to get home tonight.",
+    "num_turns": 4,
+    "speakers": ["A", "B"],
+    "turns": [
+      {"turn_id": 0, "speaker": "A", "utterance": "My flight was canceled and I am exhausted.", "emoji_annotation": {"selected_emoji": "😞", "unicode": "U+1F61E", "confidence": 5, "confidence_desc": "very confident", "error": null}},
+      {"turn_id": 1, "speaker": "B", "utterance": "That sounds so frustrating. I hope you can rest soon.", "emoji_annotation": {"selected_emoji": "😟", "unicode": "U+1F61F", "confidence": 5, "confidence_desc": "very confident", "error": null}},
+      {"turn_id": 2, "speaker": "A", "utterance": "I just want to get home tonight.", "emoji_annotation": {"selected_emoji": "😞", "unicode": "U+1F61E", "confidence": 4, "confidence_desc": "fairly confident", "error": null}},
+      {"turn_id": 3, "speaker": "B", "utterance": "I hope they find you a route soon. That is a lot to deal with.", "emoji_annotation": {"selected_emoji": "😞", "unicode": "U+1F61E", "confidence": 3, "confidence_desc": "moderate", "error": null}}
+    ],
+    "annotation_mode": "batch"
+  }
+]

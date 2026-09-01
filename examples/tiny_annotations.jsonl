@@ -1,0 +1,8 @@
+{"dialogue_id":"tiny_1","turn_id":0,"split":"train","role":"A","text":"I got a promotion today.","model":"m1","emoji":"🎉","confidence":0.9}
+{"dialogue_id":"tiny_1","turn_id":0,"split":"train","role":"A","text":"I got a promotion today.","model":"m2","emoji":"😊","confidence":0.7}
+{"dialogue_id":"tiny_1","turn_id":1,"split":"train","role":"B","text":"That is wonderful, congratulations!","model":"m1","emoji":"🎉","confidence":0.8}
+{"dialogue_id":"tiny_1","turn_id":1,"split":"train","role":"B","text":"That is wonderful, congratulations!","model":"m2","emoji":"😊","confidence":0.6}
+{"dialogue_id":"tiny_2","turn_id":0,"split":"dev","role":"A","text":"My flight was canceled and I am exhausted.","model":"m1","emoji":"😞","confidence":0.8}
+{"dialogue_id":"tiny_2","turn_id":0,"split":"dev","role":"A","text":"My flight was canceled and I am exhausted.","model":"m2","emoji":"😡","confidence":0.5}
+{"dialogue_id":"tiny_2","turn_id":1,"split":"dev","role":"B","text":"That sounds so frustrating. I hope you can rest soon.","model":"m1","emoji":"😟","confidence":0.8}
+{"dialogue_id":"tiny_2","turn_id":1,"split":"dev","role":"B","text":"That sounds so frustrating. I hope you can rest soon.","model":"m2","emoji":"😞","confidence":0.4}
