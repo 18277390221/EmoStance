@@ -4,8 +4,8 @@
 
 以下论文的官方代码与数据重建资源：
 
-> **EmoStance：基于 Emoji 弱监督的共情回复生成——回复侧情感倾向控制**  
-> Ziyuan Jin、Yuxuan Ge、Zheng Tian†  
+> **EmoStance：基于 Emoji 弱监督的共情回复生成——回复侧情感倾向控制**<br>
+> Ziyuan Jin、Yuxuan Ge、Zheng Tian†<br>
 > 上海科技大学 · †通讯作者
 
 [论文 PDF](paper/EmoStance.pdf) · [论文信息与摘要](docs/PAPER.md) · [复现指南](docs/REPRODUCTION.md)
