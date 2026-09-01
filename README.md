@@ -1,8 +1,7 @@
-# EmoStance
+# EmoStance: Response-Side Affective-Orientation Control for Empathetic Response Generation via Emoji Weak Supervision
 
 Official code and reconstruction artifacts for:
 
-> **EmoStance: Response-Side Affective-Orientation Control for Empathetic Response Generation via Emoji Weak Supervision**  
 > Ziyuan Jin, Yuxuan Ge, and Zheng Tian†  
 > ShanghaiTech University · †Corresponding author
 
